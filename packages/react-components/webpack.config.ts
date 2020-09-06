@@ -3,7 +3,7 @@ import webpack from "webpack";
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const config: webpack.Configuration = {
-  entry: "./components/index.tsx",
+  entry: "./components/index.ts",
   module: {
     rules: [
       {
@@ -20,6 +20,10 @@ const config: webpack.Configuration = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   resolve: {
@@ -33,7 +37,7 @@ const config: webpack.Configuration = {
     new ForkTsCheckerWebpackPlugin({
       async: false,
       eslint: {
-        files: "./src/**/*",
+        files: "./components/**/*.{ts,tsx,js,jsx}",
       },
     }),
   ],
