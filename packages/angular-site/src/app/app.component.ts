@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-site';
+  isLoading = false;
+
+  toggleLoading() {
+    console.log('toggling loading');
+    this.isLoading = !this.isLoading;
+  }
 }

@@ -45,3 +45,4 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogin, onLogout, onCreat
     </div>
   </header>
 );
+export default Header;

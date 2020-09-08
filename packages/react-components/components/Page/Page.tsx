@@ -65,3 +65,4 @@ export const Page: React.FC<PageProps> = ({ user, onLogin, onLogout, onCreateAcc
     </section>
   </article>
 );
+export default Page;

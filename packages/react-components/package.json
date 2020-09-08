@@ -2,9 +2,10 @@
   "name": "react-components",
   "version": "1.0.0",
   "description": "Basic React Component Library",
-  "main": "components/index.ts",
+  "main": "dist/bundle.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && tsc -p ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
